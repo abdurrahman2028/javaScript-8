@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header, .nav, .main, .first-aside, .second-aside, .footer {
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(255, 179, 194);
+    padding: 30px;
+}
+
+ul>li {
+    list-style: none;
+}
+
+.header {
+    grid-area: header;
+    background-color: royalblue;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: seagreen;
+}
+
+.main {
+    grid-area: main;
+    background-color: teal;
+}
+
+.first-aside {
+    grid-area: first-aside;
+    background-color: tomato;
+}
+
+.second-aside {
+    grid-area: second-aside;
+    background-color: yellowgreen;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: crimson;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "nav main main first-aside"
+    "nav main main second-aside"
+    "footer footer footer footer"
+    ;
+}
+    </style>
+</head>
+<body>
+    <div class="container">  
+        <header class="header">
+            <h1>This is header</h1>
+        </header> 
+        <nav class="nav">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <main class="main">
+            <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque iure, harum aperiam expedita officia modi iste rem consequatur id? Quam possimus dicta dolores atque fugiat error reiciendis ullam non quia ratione magni debitis eius voluptatum eum omnis numquam maxime, beatae quae? Est reprehenderit mollitia autem tenetur officiis, fugiat quidem commodi!</article>
+            
+            
+            
+            <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque iure, harum aperiam expedita officia modi iste rem consequatur id? Quam possimus dicta dolores atque fugiat error reiciendis ullam non quia ratione magni debitis eius voluptatum eum omnis numquam maxime, beatae quae? Est reprehenderit mollitia autem tenetur officiis, fugiat quidem commodi!</article>
+        </main>
+        <aside>
+            <div class="first-aside">fast aside</div>
+            <div class="second-aside">second aside</div>
+        </aside>
+        <footer class="footer">
+            <h1>This is footer</h1>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
